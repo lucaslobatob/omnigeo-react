@@ -1,0 +1,37 @@
+.quem-somos {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f4f7f3, #ffffff);
+}
+
+.qs-title {
+  margin-top: 98px;
+  text-transform: uppercase;
+  color: #b4b364;
+  font-size: 36px;
+  text-align: center;
+}
+
+.qs-p {
+  border: #b4b364 solid 3px;
+  padding: 16px;
+  margin: 80px 190px 20px 190px;
+}
+
+.qs-info p {
+  font-size: 20px;
+  text-align: center;
+  color: #5d726a;
+}
+
+.img-brasil {
+  margin-top: 100px;
+  margin-right: 120px;
+}
+
+.img-brasil p {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #45554f;
+}

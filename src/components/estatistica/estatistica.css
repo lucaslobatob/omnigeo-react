@@ -1,0 +1,15 @@
+.countainer-estatisticas {
+  background-color: #c5ee9f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 80px;
+  font-size: 15px;
+  color: #45554f;
+  margin-top: 80px;
+}
+
+.countainer-estatisticas img {
+  width: 250px;
+}
