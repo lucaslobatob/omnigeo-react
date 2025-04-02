@@ -9,6 +9,7 @@ import Estatistica from './components/estatistica/estatistica';
 import Orcamento from './components/orcamentos/orcamento';
 import Contato from './components/contato/contato';
 import FaleConosco from './components/faleConosco/faleConosco';
+import Obras from './components/obras/obras';
 import Footer from './components/footer/footer';
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
       <VideoComponent />
       <div className="reveal">
         <Servicos />
+      </div>
+      <div className="reveal">
+        <Obras />
       </div>
       <div className="reveal">
         <Sobre />
