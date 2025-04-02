@@ -1,21 +1,86 @@
+import './obras.css';
+import reservatorioAgua from '../../assets/img/imgObras/reservatorioagua/14.png';
+import reservatorioIrrigacao from '../../assets/img/imgObras/reservatorioirrigacao/28.png';
+import tanqueElevado from '../../assets/img/imgObras/tanqueelevado/7.png';
+import ete from '../../assets/img/imgObras/ete/40.png';
+import aterro from '../../assets/img/imgObras/aterrosanitario/31.png';
+import psicultura from '../../assets/img/imgObras/piscicultura/11.png';
+import paisagismo from '../../assets/img/imgObras/paisagistico/38.png';
+import biogestor from '../../assets/img/imgObras/biodigestor/2.png';
 
+// Vamos criar um array de obras para mapeá-las dinamicamente
+const obrasData = [
+    {
+        id: 1,
+        nome: "Reservatórios de Água",
+        imagem: reservatorioAgua, // Substitua pelo caminho real
+        link: "/reservatorios-agua" // Rota para a página da obra
+    },
+    {
+        id: 2,
+        nome: "Reservatórios de Irrigação",
+        imagem: reservatorioIrrigacao,
+        link: "/reservatorios-irrigacao"
+    },
+    {
+        id: 3,
+        nome: "Tanques Elevados",
+        imagem: tanqueElevado,
+        link: "/tanques-elevados"
+    },
+    {
+        id: 4,
+        nome: "Estação de Tratamento de Esgoto",
+        imagem: ete,
+        link: "/ete"
+    },
+    {
+        id: 5,
+        nome: "Aterros Sanitários",
+        imagem: aterro,
+        link: "/aterros-sanitarios"
+    },
+    {
+        id: 6,
+        nome: "Piscicultura",
+        imagem: psicultura,
+        link: "/piscicultura"
+    },
+    {
+        id: 7,
+        nome: "Paisagísticos",
+        imagem: paisagismo,
+        link: "/paisagisticos"
+    },
+    {
+        id: 8,
+        nome: "Biodigestor",
+        imagem: biogestor,
+        link: "/biodigestor"
+    }
+];
 
 function Obras() {
     return (
-        <section class="obras" id="obras">
-            <h2>Obras</h2>
-            <div class="obras-l1">
-                <div class="obra1 card">Reservatórios de Água</div>
-                <div class="obra2 card">Reservatórios de Irrigação</div>
-                <div class="obra3 card">Reservatórios de Vinhaça</div>
-                <div class="obra4 card">Estação de Tratamento de Esgoto</div>
-                <div class="obra5 card">Aterros Sanitários</div>
-                <div class="obra6 card">Piscicultura</div>
-                <div class="obra7 card">Paisagísticos</div>
-                <div class="obra8 card">Biodigestor</div>
+        <section className="obras" id="obras">
+            <h2 className="obras-titulo">Obras</h2>
+            <div className="obras-container">
+                {obrasData.map((obra) => (
+                    <a
+                        key={obra.id}
+                        href={obra.link}
+                        className="obra-card"
+                    >
+                        <div
+                            className="obra-imagem"
+                            style={{ backgroundImage: `url(${obra.imagem})` }}
+                        ></div>
+                        <div className="obra-nome">{obra.nome}</div>
+                    </a>
+                ))}
             </div>
         </section>
-    )
+    );
 }
 
 export default Obras;
