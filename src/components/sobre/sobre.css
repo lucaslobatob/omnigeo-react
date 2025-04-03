@@ -1,5 +1,6 @@
 .quem-somos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   background: linear-gradient(to bottom, #f4f7f3, #ffffff);
 }
@@ -34,4 +35,30 @@
   text-align: center;
   font-weight: bold;
   color: #45554f;
+}
+
+@media (max-width: 768px) {
+  .quem-somos {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .qs-info,
+  .img-brasil {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .qs-title {
+    font-size: 28px;
+  }
+
+  .qs-p {
+    font-size: 18px;
+    margin: 20px;
+  }
+
+  .img-brasil img {
+    max-width: 250px;
+  }
 }
