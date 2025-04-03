@@ -1,15 +1,29 @@
 .countainer-estatisticas {
   background-color: #c5ee9f;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
   font-size: 15px;
   color: #45554f;
   margin-top: 80px;
+  padding: 20px;
+  text-align: center;
 }
 
 .countainer-estatisticas img {
   width: 250px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .countainer-estatisticas {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .countainer-estatisticas img {
+    width: 200px;
+  }
 }
