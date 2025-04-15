@@ -18,11 +18,11 @@ function Contato() {
 
             <div class="conts-redes">
                 <h2>Siga nas redes sociais!</h2>
-                <a href="https://www.instagram.com">
+                <a href="https://www.instagram.com/omnigeo_/" target="_blank">
                     <img src={instagram} alt="Logo do Instagram" />
                     Instagram - Omnigeo | VDF Engenharia
                 </a>
-                <a href="https://www.facebook.com">
+                <a href="https://www.facebook.com/OmnigeoImp" target="_blank">
                     <img src={facebook} alt="Logo do Facebook" />
                     Facebook - Omnigeo | VDF Engenharia
                 </a>
