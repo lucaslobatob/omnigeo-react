@@ -14,7 +14,7 @@ function Orcamento() {
                     </p>
                 </div>
                 <div className="orc-form">
-                    <form action="https://formsubmit.co/contato.lucaslobatob@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/tatiane.omnigeo@hotmail.com" target="_blank" method="POST">
                         <label htmlFor="name">Nome</label>
                         <input type="text" name="name" id="name" placeholder="Digite seu nome" required />
 
