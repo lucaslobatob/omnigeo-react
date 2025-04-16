@@ -26,28 +26,30 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <VideoComponent />
-      <div className="reveal">
-        <Servicos />
+      <div className="App">
+        <Header />
+        <VideoComponent />
+        <div className="reveal">
+          <Servicos />
+        </div>
+        <div className="reveal">
+          <Obras />
+        </div>
+        <div className="reveal">
+          <Sobre />
+        </div>
+        <div className="reveal">
+          <Estatistica />
+        </div>
+        <div className="reveal">
+          <Orcamento />
+        </div>
+        <div className="reveal">
+          <Contato />
+        </div>
+        <Footer />
+        <FaleConosco />
       </div>
-      <div className="reveal">
-        <Obras />
-      </div>
-      <div className="reveal">
-        <Sobre />
-      </div>
-      <div className="reveal">
-        <Estatistica />
-      </div>
-      <div className="reveal">
-        <Orcamento />
-      </div>
-      <div className="reveal">
-        <Contato />
-      </div>
-      <Footer />
-      <FaleConosco />
     </div>
   );
 }
