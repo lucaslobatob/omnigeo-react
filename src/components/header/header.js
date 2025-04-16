@@ -1,38 +1,47 @@
 import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logoaut from "../../assets/img/logoaut.png";
 import "./header.css";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const goToSection = (sectionId) => {
+        if (location.pathname !== "/") {
+            // Vai para a home, depois scrolla
+            navigate("/", { state: { scrollTo: sectionId } });
+        } else {
+            // Já está na home, só scrolla
+            const el = document.getElementById(sectionId);
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
     return (
         <header className="header">
             <div className="header__logo">
-                <img src={logoaut} alt="Logo Omnigeo" />
+                <Link to="/">
+                    <img src={logoaut} alt="Logo Omnigeo" />
+                </Link>
             </div>
 
-            {/* Ícone do menu hamburguer */}
-            <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-                ☰
-            </div>
-
-            {/* Menu principal */}
             <nav>
                 <ul className={`menu ${menuOpen ? "active" : ""}`}>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#quem-somos">Quem Somos</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><a onClick={() => goToSection("quem-somos")}>Quem Somos</a></li>
+                    <li><a onClick={() => goToSection("servicos")}>Serviços</a></li>
                     <li className="dropdown">
-                        <a href="#obras">Obras</a>
+                        <a onClick={() => goToSection("obras")}>Obras</a>
                         <ul className="submenu">
-                            <li><a href="#obras">Reservatórios de Água</a></li>
-                            <li><a href="#obras">Reservatórios de Irrigação</a></li>
-                            <li><a href="#obras">Reservatórios de Vinhaça</a></li>
-                            <li><a href="#obras">Estação de Tratamento de Esgoto</a></li>
-                            <li><a href="#obras">Aterros Sanitários</a></li>
-                            <li><a href="#obras">Piscicultura</a></li>
-                            <li><a href="#obras">Paisagísticos</a></li>
-                            <li><a href="#obras">Biodigestor</a></li>
+                            <li><Link to="/reservatorio-agua">Reservatórios de Água</Link></li>
+                            <li><Link to="/reservatorio-irrigacao">Reservatórios de Irrigação</Link></li>
+                            <li><Link to="/tanques-elevados">Tanques Elevados</Link></li>
+                            <li><Link to="/ete">Estação de Tratamento de Esgoto</Link></li>
+                            <li><Link to="/aterros-sanitarios">Aterros Sanitários</Link></li>
+                            <li><Link to="/piscicultura">Piscicultura</Link></li>
+                            <li><Link to="/paisagisticos">Paisagísticos</Link></li>
+                            <li><Link to="/biodigestor">Biodigestor</Link></li>
                         </ul>
                     </li>
                     <li><a href="#orcamentos">Orçamentos</a></li>
