@@ -8,19 +8,18 @@ import psicultura from '../../assets/img/imgObras/piscicultura/11.png';
 import paisagismo from '../../assets/img/imgObras/paisagistico/38.png';
 import biogestor from '../../assets/img/imgObras/biodigestor/2.png';
 
-// Vamos criar um array de obras para mapeá-las dinamicamente
 const obrasData = [
     {
         id: 1,
         nome: "Reservatórios de Água",
-        imagem: reservatorioAgua, // Substitua pelo caminho real
-        link: "/reservatorios-agua" // Rota para a página da obra
+        imagem: reservatorioAgua,
+        link: "/reservatorio-agua"
     },
     {
         id: 2,
         nome: "Reservatórios de Irrigação",
         imagem: reservatorioIrrigacao,
-        link: "/reservatorios-irrigacao"
+        link: "/reservatorio-irrigacao"
     },
     {
         id: 3,
