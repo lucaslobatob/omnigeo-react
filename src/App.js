@@ -14,7 +14,7 @@ import Footer from './components/footer/footer';
 
 function App() {
   useEffect(() => {
-    ScrollReveal().reveal(".reveal", {
+    ScrollReveal().reveal(".reveal-obras, .reveal-servico", {
       origin: "bottom",
       distance: "50px",
       duration: 1000,
@@ -29,22 +29,22 @@ function App() {
       <div className="App">
         <Header />
         <VideoComponent />
-        <div className="reveal">
+        <div className="reveal-servico">
           <Servicos />
         </div>
-        <div className="reveal">
+        <div className="reveal-obras">
           <Obras />
         </div>
-        <div className="reveal">
+        <div>
           <Sobre />
         </div>
-        <div className="reveal">
+        <div>
           <Estatistica />
         </div>
-        <div className="reveal">
+        <div>
           <Orcamento />
         </div>
-        <div className="reveal">
+        <div>
           <Contato />
         </div>
         <Footer />
