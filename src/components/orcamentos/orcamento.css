@@ -23,11 +23,13 @@
   color: #5d726a;
   font-size: 25px;
   justify-content: center;
+  text-align: center;
 }
 
 .orc-main p {
   color: #5d726a;
   font-size: 18px;
+  text-align: center;
 }
 
 .orc-form {
@@ -77,6 +79,7 @@ textarea {
 @media (max-width: 768px) {
   .container-orc {
     flex-direction: column;
+    padding: 0px 40px 0px 0px;
   }
 
   .orc-form {

@@ -91,12 +91,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0px 40px 0px 0px;
   }
 
   .conts-init,
   .conts-redes,
   .conts-atendimento {
     max-width: 100%;
+    text-align: center;
   }
 
   .container-icon {

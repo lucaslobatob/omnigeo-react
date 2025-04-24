@@ -16,20 +16,21 @@
   justify-content: center;
   color: #5d726a;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .serv-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  gap: 10px;
 }
 
 .serv-list p {
-  width: 30%;
+  flex: 1 1 30%;
+  max-width: 30%;
   text-align: center;
   font-size: 14px;
-  list-style-type: none;
   background-color: #92bb80;
   text-transform: uppercase;
   border-radius: 25px;
@@ -37,4 +38,20 @@
   margin: 5px;
   color: black;
   font-weight: bold;
+}
+
+/* Responsividade para telas menores (até 768px) */
+@media (max-width: 768px) {
+  .serv-list p {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* Para telas bem pequenas (até 480px) - opcional */
+@media (max-width: 480px) {
+  .serv-list p {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
