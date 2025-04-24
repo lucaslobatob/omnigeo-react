@@ -7,6 +7,7 @@ import AterrosSanitarios from '../src/pages/AterrosSanitarios/AterrosSanitarios.
 import Piscicultura from '../src/pages/Piscicultura/Piscicultura.js';
 import Paisagisticos from '../src/pages/Paisagisticos/Paisagisticos.js';
 import Biodigestor from '../src/pages/Biodigestor/Biodigestor.js';
+import NotFound from '../src/pages/NotFound/NotFound.js';
 import App from './App.js';
 
 function Routers() {
@@ -22,6 +23,7 @@ function Routers() {
                 <Route path="/piscicultura" element={<Piscicultura />} />
                 <Route path="/paisagisticos" element={<Paisagisticos />} />
                 <Route path="/biodigestor" element={<Biodigestor />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
     );
