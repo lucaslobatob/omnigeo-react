@@ -13,16 +13,16 @@ import Obras from './components/obras/obras';
 import Footer from './components/footer/footer';
 
 function App() {
-  useEffect(() => {
-    ScrollReveal().reveal(".reveal-obras, .reveal-servico", {
-      origin: "bottom",
-      distance: "50px",
-      duration: 1000,
-      delay: 150,
-      easing: "ease-in-out",
-      reset: true,
-    });
-  }, []);
+  // useEffect(() => {
+  //   ScrollReveal().reveal(".reveal-obras, .reveal-servico", {
+  //     origin: "bottom",
+  //     distance: "50px",
+  //     duration: 1000,
+  //     delay: 150,
+  //     easing: "ease-in-out",
+  //     reset: true,
+  //   });
+  // }, []);
 
   return (
     <div className="App">
